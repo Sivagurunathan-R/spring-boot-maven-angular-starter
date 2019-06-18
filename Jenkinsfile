@@ -19,6 +19,12 @@ pipeline {
         steps{
         bat "mvn test"
              }
+      }
+   post {
+        always {
+            archiveArtifacts artifacts: 'build/libs/**/*.jar', fingerprint: true
+            junit 'build/reports/**/*.xml'
+        }
     }
     
     stage('package'){
@@ -49,9 +55,4 @@ pipeline {
       }
     }
   }
-   post {
-        always {
-            junit 'build/reports/**/*.xml'
-        }
-    }
 }
