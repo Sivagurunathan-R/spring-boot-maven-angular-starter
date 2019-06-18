@@ -22,9 +22,23 @@ pipeline {
     }
     
     stage('result'){
-      steps{
-      echo 'sucess'
-        echo 'need to deploy'
+
+      parallel{
+      
+        stage('stage 1')
+        {
+          steps{
+          echo 'stage 1 executed'
+          }
+        }
+      
+        stage('stage 2')
+        {
+          steps{
+          
+            echo 'stage 2 executed'
+          }
+        }
       }
     }
     
