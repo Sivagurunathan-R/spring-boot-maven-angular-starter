@@ -24,6 +24,7 @@ pipeline {
     stage('result'){
       steps{
       echo 'sucess'
+        echo 'need to deploy'
       }
     }
     
