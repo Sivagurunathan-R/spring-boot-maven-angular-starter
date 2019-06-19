@@ -48,11 +48,13 @@ pipeline {
         }
       }
     }
-  }
-  post {
-        always {
-            archiveArtifacts artifacts: 'build/libs/**/*.jar', fingerprint: true
-            junit 'build/reports/**/*.xml'
-        }
+    stage('deploy to tomcat'){
+      steps{
+    sshagent(['tomcat_ssl']) {   
+       bat 'scp -o StrictHostKeyChecking=no target/*war ec2-user@https://localhost:9091:/opt/tomcat8/webapps/'
+      }
     }
+   }
+  }
+  
 }
