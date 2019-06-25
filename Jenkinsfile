@@ -38,7 +38,7 @@ pipeline {
     
       steps{
       
-        bat 'docker images'
+        bat 'docker build -t myapp/jenkins:latest .'
       }
     }
   }
