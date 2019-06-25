@@ -20,6 +20,7 @@ pipeline {
   stages {
     stage('mvn package') {
       steps {
+        bat "mvn clean install"
         bat "mvn package"
       }
     }
