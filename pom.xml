@@ -16,10 +16,14 @@
     <name>spring-boot-angular-starter</name>
     <description>Spring Boot Angular Starter Project</description>
 
-    <modules>
-        <module>frontend</module>
-        <module>backend</module>
-    </modules>
+  <profiles>
+    <profile>
+        <modules>
+            <module>../frontend</module>
+            <module>../backend</module>           
+        </modules>
+    </profile>
+</profiles>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
