@@ -38,7 +38,7 @@ pipeline {
     
       steps{
       
-        bat 'docker build -t <image_name>:<BUILD_ID> .'
+        bat 'docker build -t siva/angular:latest .'
       }
     }
   }
