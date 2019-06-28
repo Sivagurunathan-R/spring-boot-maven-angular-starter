@@ -38,7 +38,7 @@ pipeline {
     
       steps{
       
-        bat 'docker build -t myapp/jenkins:latest .'
+        bat 'docker build -t myapp/jenkins:v.${BUILD_NUMBER} .'
       }
     }
   }
