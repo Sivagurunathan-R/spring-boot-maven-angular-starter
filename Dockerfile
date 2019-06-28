@@ -7,5 +7,3 @@ COPY /. /myfiles
 
 WORKDIR /myfiles
 
-RUN mvn clean package
-
