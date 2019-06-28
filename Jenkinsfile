@@ -38,7 +38,7 @@ pipeline {
     
       steps{
       
-        bat 'docker build -t myapp/jenkins:v.${BUILD_NUMBER} .'
+        bat 'docker build -t <image_name>:<BUILD_ID> .'
       }
     }
   }
