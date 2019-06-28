@@ -7,8 +7,5 @@ COPY /. /myfiles
 
 WORKDIR /myfiles
 
-
-RUN mvn dependency:go-offline -B
-
 RUN mvn clean package
 
