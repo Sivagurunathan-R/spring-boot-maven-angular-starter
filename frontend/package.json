@@ -2,6 +2,12 @@
   "name": "frontend",
   "version": "0.0.0",
   "license": "MIT",
+  
+  "engines": {
+       "node": "8.9.0",
+       "npm": "3.10.3"
+   }
+  
   "scripts": {
     "ng": "ng",
     "start": "node server.js",
