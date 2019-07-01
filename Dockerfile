@@ -7,4 +7,4 @@ WORKDIR /myfiles
 
 EXPOSE 8080
 
-CMD ["java", "-jar", "/myfiles/backend/target/ngboot-app.jar"]
+CMD ["java","java $JAVA_OPTS -Dserver.port=$PORT -jar /myfiles/backend/target/ngboot-app.jar"]
