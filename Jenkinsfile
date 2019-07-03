@@ -38,7 +38,7 @@ pipeline {
     
       steps{
       
-        bat 'docker build -t siva/angular:v2 .'
+        bat 'docker build -t siva/angular:v3 .'
       }
     }
   }
